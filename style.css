@@ -7,6 +7,34 @@
   padding: 0;
 }
 
+
+.experience-details-container {
+  display: flex; /* Use Flexbox to align items */
+  justify-content: space-between; /* Space between items */
+}
+
+.details-container {
+  flex: 1; /* Equal space for each container */
+  margin: 10px; /* Margin around each container */
+  padding: 20px; /* Padding inside each container */
+  border: 1px solid #ccc; /* Border for both boxes */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+.education-item, .experience-item {
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.separator {
+  border: 1px solid #ccc; /* Line separator color */
+  margin: 20px 0; /* Margin around the line */
+}
+
+.experience-sub-title {
+  margin-bottom: 10px; /* Space below the sub-title */
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(270deg, #ffeb3b, #ff80ab, #80d8ff, #ffeb3b);
