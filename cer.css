@@ -1,0 +1,98 @@
+/* Certifications Container */
+.certifications-flip-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; /* Adds space between cards */
+    padding: 40px; /* Adds space around the entire grid */
+    justify-items: center;
+}
+
+/* Flip Card Styles */
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 200px;
+    perspective: 1000px; /* Enables 3D effect */
+    margin: 20px; /* Adds extra spacing between rows and cards */
+}
+
+/* Flip Card Inner */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side initially */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: black; /* Change text color to black */
+    padding: 20px;
+}
+
+/* Front card (white background and black text) */
+.flip-card-front {
+    background-color: white; /* White background */
+}
+
+/* Back card (white background and black text) */
+.flip-card-back {
+    background-color: white; /* White background for back */
+    transform: rotateY(180deg);
+}
+
+/* Card Logo */
+.cert-logo {
+    width: 160px;  /* Increased logo size */
+    height: 160px; /* Increased logo size */
+    margin-bottom: 10px;
+}
+
+/* Title Style */
+.cert-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button Style */
+.btn-view-cert {
+    background-color: rgb(85, 85, 85); /* Button background color */
+    color: white; /* White text */
+    border: 2px solid black; /* Black border */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover Effect for Button */
+.btn-view-cert:hover {
+    background-color: black; /* Black background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .flip-card {
+        width: 90%;
+    }
+}
