@@ -1,9 +1,9 @@
 /* Certifications Container */
 .certifications-flip-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px; /* Adds space between cards */
-    padding: 40px; /* Adds space around the entire grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+    gap: 40px;
+    padding: 40px;
     justify-items: center;
 }
 
@@ -12,11 +12,10 @@
     background-color: transparent;
     width: 250px;
     height: 200px;
-    perspective: 1000px; /* Enables 3D effect */
-    margin: 20px; /* Adds extra spacing between rows and cards */
+    perspective: 1000px;
+    margin: 20px;
 }
 
-/* Flip Card Inner */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -37,31 +36,31 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    backface-visibility: hidden; /* Hides the back side initially */
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    color: black; /* Change text color to black */
+    color: black;
     padding: 20px;
 }
 
-/* Front card (white background and black text) */
+/* Front card */
 .flip-card-front {
-    background-color: white; /* White background */
+    background-color: white;
 }
 
-/* Back card (white background and black text) */
+/* Back card */
 .flip-card-back {
-    background-color: white; /* White background for back */
+    background-color: white;
     transform: rotateY(180deg);
 }
 
 /* Card Logo */
 .cert-logo {
-    width: 160px;  /* Increased logo size */
-    height: 160px; /* Increased logo size */
+    width: 160px;
+    height: 160px;
     margin-bottom: 10px;
 }
 
@@ -74,9 +73,9 @@
 
 /* Button Style */
 .btn-view-cert {
-    background-color: rgb(85, 85, 85); /* Button background color */
-    color: white; /* White text */
-    border: 2px solid black; /* Black border */
+    background-color: rgb(85, 85, 85);
+    color: white;
+    border: 2px solid black;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -84,14 +83,23 @@
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover Effect for Button */
 .btn-view-cert:hover {
-    background-color: black; /* Black background on hover */
-    color: white; /* White text on hover */
+    background-color: black;
+    color: white;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .certifications-flip-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+    }
+}
+
 @media (max-width: 768px) {
+    .certifications-flip-container {
+        grid-template-columns: 1fr; /* Stack cards on mobile */
+    }
+
     .flip-card {
         width: 90%;
     }
