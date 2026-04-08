@@ -1,5 +1,5 @@
 // Chatbot Configuration
-const GOOGLE_API_KEY = 'AIzaSyD2KktQxdN0AB3OBObJeDnjEVj32EOwolc'; // ⬅️ REPLACE WITH YOUR API KEY
+const GOOGLE_API_KEY = 'AIzaSyBMrEiPRoq63sHHOhrPfo9I__EosJP7tUo'; // ⬅️ REPLACE WITH YOUR API KEY
 
 const HEMANTH_PROFILE = `
 You are a smart, friendly personal assistant representing Hemanth Borra.
